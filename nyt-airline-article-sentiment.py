@@ -21,7 +21,7 @@ with open("Airlines.csv", "w") as f:
         for article in articles: 
             abstract = article["abstract"]
             pub_date = article["pub_date"]
-            #write code to get the sentiment score
+       
             blob = TextBlob(abstract)
             score = blob.sentiment.polarity
             writer.writerow([pub_date,company,abstract,score])
